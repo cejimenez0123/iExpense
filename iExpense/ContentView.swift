@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-struct ExpenseItem: Identifiable{
-    let id = UUID()
+struct ExpenseItem: Identifiable,Codable{
+    var id = UUID()
     let name: String
     let type: String
     let amount: Int
@@ -15,7 +15,26 @@ struct ExpenseItem: Identifiable{
 }
 class Expenses: ObservableObject{
     
-    @Published var items=[ExpenseItem]()
+    @Published var items=[ExpenseItem](){
+    didSet{
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self.items){
+            
+            UserDefaults.standard.set(encoded,forKey: "items")
+        }
+    }
+        
+    }
+    init(){
+        if let items = UserDefaults.standard.data(forKey: "items"){
+        let decoder = JSONDecoder()
+        if let decoded = try?
+            decoder.decode([ExpenseItem].self, from: items){
+            self.items = decoded
+        return
+        }
+        }}
+    
 }
 struct ContentView: View {
     @State private var showingAddExpense = false
@@ -24,7 +43,15 @@ struct ContentView: View {
         NavigationView {
             List{
                 ForEach(expenses.items){ item in
-                    Text(item.name)
+                    HStack{
+                        VStack{
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.type)
+                        }
+                        Spacer()
+                        Text("$ \(item.amount)")
+                    }
                 }.onDelete(perform: removeItems)
             }
             .navigationBarTitle("iExpense")
