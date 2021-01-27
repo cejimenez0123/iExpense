@@ -16,6 +16,7 @@
 		358EA9E125BB4652007244D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358EA9DF25BB4652007244D7 /* LaunchScreen.storyboard */; };
 		358EA9EC25BB4653007244D7 /* iExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358EA9EB25BB4653007244D7 /* iExpenseTests.swift */; };
 		358EA9F725BB4653007244D7 /* iExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358EA9F625BB4653007244D7 /* iExpenseUITests.swift */; };
+		358EAA1325BDFCA0007244D7 /* addView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358EAA1225BDFCA0007244D7 /* addView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		358EA9F225BB4653007244D7 /* iExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		358EA9F625BB4653007244D7 /* iExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseUITests.swift; sourceTree = "<group>"; };
 		358EA9F825BB4653007244D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		358EAA1225BDFCA0007244D7 /* addView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				358EA9D125BB464D007244D7 /* AppDelegate.swift */,
 				358EA9D325BB464D007244D7 /* SceneDelegate.swift */,
 				358EA9D525BB464D007244D7 /* ContentView.swift */,
+				358EAA1225BDFCA0007244D7 /* addView.swift */,
 				358EA9DA25BB4652007244D7 /* Assets.xcassets */,
 				358EA9DF25BB4652007244D7 /* LaunchScreen.storyboard */,
 				358EA9E225BB4652007244D7 /* Info.plist */,
@@ -272,6 +275,7 @@
 				358EA9D225BB464D007244D7 /* AppDelegate.swift in Sources */,
 				358EA9D425BB464D007244D7 /* SceneDelegate.swift in Sources */,
 				358EA9D925BB464D007244D7 /* iExpense.xcdatamodeld in Sources */,
+				358EAA1325BDFCA0007244D7 /* addView.swift in Sources */,
 				358EA9D625BB464D007244D7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
